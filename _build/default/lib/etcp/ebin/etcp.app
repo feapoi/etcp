@@ -1,0 +1,9 @@
+{application,etcp,
+             [{description,[]},
+              {vsn,"1"},
+              {registered,[]},
+              {applications,[kernel,stdlib,lager]},
+              {mod,{etcp_app,[]}},
+              {env,[]},
+              {modules,[client,etcp,etcp_app,etcp_listener,etcp_sup,player,
+                        player_sup,reloader]}]}.

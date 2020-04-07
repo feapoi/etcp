@@ -1,0 +1,56 @@
+2020-04-07 14:58:52 =ERROR REPORT====
+** Generic server client terminating 
+** Last message in was connect
+** When Server state == {state}
+** Reason for termination == 
+** {{badmatch,{error,econnrefused}},[{client,handle_info,2,[{file,"h:/erl_ws/etcp/_build/default/lib/etcp/src/example/client.erl"},{line,50}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2020-04-07 14:58:52 =CRASH REPORT====
+  crasher:
+    initial call: client:init/1
+    pid: <0.195.0>
+    registered_name: client
+    exception error: {{badmatch,{error,econnrefused}},[{client,handle_info,2,[{file,"h:/erl_ws/etcp/_build/default/lib/etcp/src/example/client.erl"},{line,50}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.119.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.119.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 1151
+  neighbours:
+    neighbour: [{pid,<0.151.0>},{registered_name,player_sup},{initial_call,{player_sup,init,['Argument__1']}},{current_function,{gen_server,loop,7}},{ancestors,[<0.119.0>]},{message_queue_len,0},{links,[<0.119.0>]},{trap_exit,false},{status,waiting},{heap_size,233},{stack_size,10},{reductions,91},{current_stacktrace,[{gen_server,loop,7,[{file,"gen_server.erl"},{line,403}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}]
+    neighbour: [{pid,<0.119.0>},{registered_name,[]},{initial_call,{erlang,apply,2}},{current_function,{shell,eval_loop,3}},{ancestors,[]},{message_queue_len,0},{links,[<0.151.0>,<0.195.0>,<0.118.0>]},{trap_exit,false},{status,waiting},{heap_size,987},{stack_size,7},{reductions,2917},{current_stacktrace,[{shell,eval_loop,3,[{file,"shell.erl"},{line,622}]}]}]
+2020-04-07 15:31:44 =ERROR REPORT====
+** State machine etcp_listener terminating
+** Last event = {info,{inet_async,#Port<0.13>,0,{ok,#Port<0.15>}}}
+** When server state  = {accepting,{state,#Port<0.13>,player_sup,player,inet_tcp,{{0,0,0,0},8111},#Fun<etcp.1.5024299>}}
+** Reason for termination = error:{case_clause,<0.157.0>}
+** Callback mode = state_functions
+** Stacktrace =
+**  [{etcp_listener,accepting,3,[{file,"h:/erl_ws/etcp/_build/default/lib/etcp/src/etcp_listener.erl"},{line,107}]},{gen_statem,call_state_function,5,[{file,"gen_statem.erl"},{line,1660}]},{gen_statem,loop_event_state_function,6,[{file,"gen_statem.erl"},{line,1023}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]
+2020-04-07 15:31:44 =CRASH REPORT====
+  crasher:
+    initial call: etcp_listener:init/1
+    pid: <0.145.0>
+    registered_name: etcp_listener
+    exception error: {{case_clause,<0.157.0>},[{etcp_listener,accepting,3,[{file,"h:/erl_ws/etcp/_build/default/lib/etcp/src/etcp_listener.erl"},{line,107}]},{gen_statem,call_state_function,5,[{file,"gen_statem.erl"},{line,1660}]},{gen_statem,loop_event_state_function,6,[{file,"gen_statem.erl"},{line,1023}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [etcp_sup,<0.123.0>]
+    message_queue_len: 0
+    messages: []
+    links: [#Port<0.13>,#Port<0.15>,<0.124.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 1176
+  neighbours:
+2020-04-07 15:31:44 =SUPERVISOR REPORT====
+     Supervisor: {local,etcp_sup}
+     Context:    child_terminated
+     Reason:     {{case_clause,<0.157.0>},[{etcp_listener,accepting,3,[{file,"h:/erl_ws/etcp/_build/default/lib/etcp/src/etcp_listener.erl"},{line,107}]},{gen_statem,call_state_function,5,[{file,"gen_statem.erl"},{line,1660}]},{gen_statem,loop_event_state_function,6,[{file,"gen_statem.erl"},{line,1023}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.145.0>},{id,{listener_sup,{player,8111}}},{mfargs,{etcp_listener,start_link,[{8111,[binary,{packet,raw}],player_sup,player,#Fun<etcp.1.5024299>}]}},{restart_type,transient},{shutdown,infinity},{child_type,worker}]
+

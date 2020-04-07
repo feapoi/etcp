@@ -1,0 +1,20 @@
+%%%-------------------------------------------------------------------
+%%% @author zyh
+%%% @copyright (C) 2020, <COMPANY>
+%%% @doc
+%%%
+%%% @end
+%%% Created : 03. 四月 2020 11:01
+%%%-------------------------------------------------------------------
+{application, etcp, [
+    {description, ""},
+    {vsn, "1"},
+    {registered, []},
+    {applications, [
+        kernel,
+        stdlib,
+        lager
+    ]},
+    {mod, {etcp_app, []}},
+    {env, []}
+]}.

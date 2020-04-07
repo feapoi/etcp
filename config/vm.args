@@ -1,0 +1,11 @@
+-setcookie etcp
+
++A 10
++IOt 10
++B i
++c true
++C multi_time_warp
++K true
++P 1048576
++Q 1048576
++spp true
